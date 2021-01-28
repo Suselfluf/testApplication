@@ -1,5 +1,5 @@
 const path = require('path');
-const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: './index.js',
@@ -8,11 +8,14 @@ module.exports = {
         filename: 'my-first-webpack.bundle.js'
     },
     plugins: [
-        new HtmlWebpackPartialsPlugin()
+        new HtmlWebpackPlugin({
+            template: 'index.html',
+            inject: 'body'
+        })
     ],
     devServer: {
         port: 8000,
         historyApiFallback: true,
-        hot: true,
+        hot: true
     },
 };
