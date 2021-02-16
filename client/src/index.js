@@ -1,11 +1,6 @@
+import "./index.scss";
 
-const body = JSON.stringify({
-    testName: 'CSS'
-})
-fetch('/api/tests', {
-    method: 'POST',
-    body: body,
-    headers: {
-        'Content-Type': 'application/json'
-    }
-})
+import {Control} from './modules/main/control.js';
+
+const mainControl = new Control();
+mainControl.initialization();

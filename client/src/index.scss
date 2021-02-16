@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+}
+
+#testType{
+    display: grid;
+    padding:0 25em 0 25em;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3,1fr);
+}
+#testType > p{
+   text-align: center;
+}
