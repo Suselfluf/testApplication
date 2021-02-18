@@ -1,6 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack')
+
+
 
 module.exports = {
     entry: './src/index.js',
@@ -36,6 +39,12 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'my-first-webpack.bundle.css'
         }),
+        new webpack.ProvidePlugin({
+            $:'jquery',
+            JQuery: 'jquery',
+            'window.jQuery':'jquery'
+
+        })
     ],
     devServer: {
         port: 8000,
