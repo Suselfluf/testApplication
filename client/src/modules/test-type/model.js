@@ -6,15 +6,9 @@ export class Model{
 
 
      getTestsInfo(){
-        return new Promise ((resolve) => {
-            $.ajax('api/tests',{
+            return $.ajax('api/tests',{
                 dataType: "json"
             })
-                .done(function (data){
-                    this.testInfo = data;
-                    resolve(this.testInfo)
-                })
-        })
     }
 }
 

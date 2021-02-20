@@ -43,7 +43,6 @@ module.exports = {
             $:'jquery',
             JQuery: 'jquery',
             'window.jQuery':'jquery'
-
         })
     ],
     devServer: {

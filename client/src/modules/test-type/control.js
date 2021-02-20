@@ -9,8 +9,9 @@ export class Control{
 
     initialization(){
         this.model.getTestsInfo()
-            .then(data => {
+            .done(data => {
+                this.model.testInfo = data;
                 this.view.viewTestLayout(data)
             })
-    }
+            }
 }
