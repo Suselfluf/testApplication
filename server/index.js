@@ -2,6 +2,7 @@ const express = require('express')
 const config = require('config')
 const mongoose = require('mongoose')
 const testTypeRouter = require('./routers/test-type')
+const testListRouter = require('./routers/test-list')
 
 class App {
     constructor() {
@@ -21,6 +22,7 @@ class App {
     addMiddleware (){
         this.server.use(express.json())
         this.server.use('/api', testTypeRouter)
+        this.server.use('/api', testListRouter)
     }
 
     async runServer() {
