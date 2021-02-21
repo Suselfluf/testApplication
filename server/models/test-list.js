@@ -1,7 +1,7 @@
 const {Schema, model} = require('mongoose')
 
 const TestList = new Schema({
-    testTypeId: String,
+    name: {type: String, unique: true},
     test: String
 })
 
