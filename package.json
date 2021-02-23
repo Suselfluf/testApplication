@@ -7,7 +7,9 @@
     "start:dev-server": "nodemon server/index.js",
     "start:dev": "cross-env NODE_ENV=development concurrently \"npm run start:dev-server\" \"npm run start:dev-client --prefix client\"",
     "testRout:get-test-type": "node server/testAPI/test-type.js",
-    "testRout:create-test-type": "node server/testAPI/test-type.js --create CSS"
+    "testRout:create-test-type": "node server/testAPI/test-type.js --create CSS",
+    "testRout:get-test": "node server/testAPI/test-list.js CSS",
+    "testRout:create-test": "node server/testAPI/test-list.js --create CSS"
   },
   "keywords": [
     "test"
