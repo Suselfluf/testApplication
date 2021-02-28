@@ -11,6 +11,7 @@ body{
     display: grid;
     justify-content: center;
     align-items: center;
+    height: 50px;
     grid-template-columns: repeat(3,1fr);
 }
 #testType > p{
@@ -42,19 +43,12 @@ body{
     transition: ease-out 0.3s;
     font-size: 0.8rem;
 }
-.btn:hover {
-    box-shadow: inset 140px 0 0 0 #8C6DD7;
-    width: 140px;
-    height: 35px;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
+
 
 .testLayout{
-    margin-top:30px;
+    margin:30px 40px 0 40px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-auto-rows: minmax(200px, auto);
     grid-column-gap: 2rem;
     grid-row-gap:3rem;
 
@@ -62,6 +56,7 @@ body{
 
 .testQuestions{
     display: grid;
+    height: 360px;
     border: solid 2px black;
     border-radius: 10px;
     text-align: center;
@@ -82,6 +77,13 @@ body{
 @media (hover: hover) {
     #answers:hover {
         border: 3px solid #BFAE30; /* solves sticky problem */
+        cursor: pointer;
+    }
+    .btn:hover {
+        box-shadow: inset 140px 0 0 0 #8C6DD7;
+        width: 140px;
+        height: 35px;
+        font-size: 1.5rem;
         cursor: pointer;
     }
 }
