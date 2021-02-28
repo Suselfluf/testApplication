@@ -7,7 +7,7 @@ createChannel(channel){
         value: null,
         subscribers: []
     }
-    this.log()
+    //this.log()
 }
 
 setData(channel, value){

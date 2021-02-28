@@ -5,11 +5,13 @@ export class View{
 
     viewTestLayout(info){
         info.forEach(elem =>{
-            document.getElementById('testType').innerHTML +=`<p class="btn" >${elem.name}</p> `
+            //document.getElementById('testType').innerHTML +=`<p class="btn" >${elem.name}</p> `
+            $('#testType').prepend(`<p id="titles">${elem.name}</p>`)
+            $('#titles').addClass("btn")
         })
-        document.querySelectorAll('.btn').forEach((e)=>{
-            e.addEventListener('click', (e)=>this.chooseTest(e))
-        })
+        for (const button of $('.btn')) {
+            button.addEventListener('click', (e)=>this.chooseTest(e))
+        }
     }
 
     chooseTest(event){
