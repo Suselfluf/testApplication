@@ -8,8 +8,8 @@
     "start:dev": "cross-env NODE_ENV=development concurrently \"npm run start:dev-server\" \"npm run start:dev-client --prefix client\"",
     "testRout:get-test-type": "node server/testAPI/test-type.js",
     "testRout:create-test-type": "node server/testAPI/test-type.js --create CSS",
-    "testRout:get-test": "node server/testAPI/test-list.js CSS",
-    "testRout:create-test": "node server/testAPI/test-list.js --create CSS"
+    "testRout:get-test": "node server/testAPI/test-list.js HTML",
+    "testRout:create-test": "node server/testAPI/test-list.js --create HTML"
   },
   "keywords": [
     "test"
@@ -20,11 +20,15 @@
     "concurrently": "^5.3.0",
     "config": "^3.3.3",
     "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "lodash": "^4.17.20",
     "mongoose": "^5.11.14",
+    "popper.js": "^1.16.1",
     "request": "^2.88.2"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
+    "mini-css-extract-plugin": "^1.3.7",
     "nodemon": "^2.0.7"
   }
 }
