@@ -80,6 +80,10 @@ input{
     border-radius: 5px;
     width: 400px;
     height: 40px;
+
+    &.active{
+        border: dashed 2px black;
+    }
 }
 
 
