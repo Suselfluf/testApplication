@@ -3,11 +3,18 @@ body{
     height: 100%;
     font-family: 'Comfortaa', cursive;
 }
-
+input{
+    height: 0;
+}
+#submit{
+    height: 40px;
+    margin: 0 4rem 0 4rem;
+    text-align: center;
+}
 .wrapper{
 }
 
-#testType{
+#testType {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -17,8 +24,8 @@ body{
 #testType > p{
      text-align: center;
 }
-.title{
-    display: flex;
+.title {
+    display: grid;
     justify-content: center;
     align-items: center;
 }
@@ -65,14 +72,16 @@ body{
 
 
 }
+
 #answers{
     border: outset 1px #2D0571;
     background-color: #7A45D6;
     color: #FFE100;
     border-radius: 5px;
-    width: 320px;
+    width: 400px;
     height: 40px;
 }
+
 
 @media (hover: hover) {
     #answers:hover {

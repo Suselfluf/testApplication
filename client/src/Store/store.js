@@ -7,7 +7,6 @@ createChannel(channel){
         value: null,
         subscribers: []
     }
-    //this.log()
 }
 
 setData(channel, value){
@@ -20,7 +19,6 @@ setData(channel, value){
         this.createChannel(channel)
         this._store[channel].value=value
     }
-    this.log()
 }
 
 informSubs(channel){
@@ -28,7 +26,6 @@ informSubs(channel){
     subscribers.forEach((sub)=>{
         sub(value)
     })
-    this.log()
 }
 
 subscribe(channel, sub){
@@ -40,16 +37,12 @@ subscribe(channel, sub){
         this.createChannel(channel)
         this._store[channel].subscribers.push(sub)
     }
-    this.log()
+
     return ()=> {
         this._store[channel].subscribers.splice(i - 1, 1)
-        this.log()
     }
 }
 
-log(){
-    console.log(this._store)
-}
 }
 
 const store = new Store()

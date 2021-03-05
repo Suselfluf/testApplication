@@ -4,7 +4,6 @@ import {store} from '../../Store/store'
 
 export class Control{
     constructor() {
-        console.log(this.getCurrentTarget.bind(this))
         this.view = new View(this.getCurrentTarget.bind(this));
         this.model = new Model();
     }

@@ -5,7 +5,6 @@ export class View{
 
     viewTestLayout(info){
         info.forEach(elem =>{
-            //document.getElementById('testType').innerHTML +=`<p class="btn" >${elem.name}</p> `
             $('#testType').prepend(`<p id="titles">${elem.name}</p>`)
             $('#titles').addClass("btn")
         })

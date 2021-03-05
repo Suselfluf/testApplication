@@ -1,14 +1,21 @@
-
-
 export class Model {
-    constructor() {
 
-    }
-    getTests(){
-        return $.ajax('api/test/JS',{
-            dataType: "json"
+    getTests(value){
+        return new Promise(resolve => {
+                fetch(`api/test/${value}`)
+                    .then(e=>e.json())
+                    .then(data => {
+                        resolve(data)
+                    })
         })
-
     }
 
+    sendAnswers(){
+        $('form').submit(function (e){
+            e.preventDefault();
+            var form = $('form').serializeArray();
+            console.log(form)
+        })
+    }
 }
+

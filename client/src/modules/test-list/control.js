@@ -11,17 +11,15 @@ export class Control {
     }
 
     initialization(){
-        this.model.getTests()
-            .done(data => {
-                //console.log(data.testList)
-                this.view.layOutTest(data.testList)
-            })
-        const unsub = store.subscribe('currentTest', (value)=>{
-            console.log('Hi current test is changed to '+value)
-            fetch(`api/test/${value}`)
-                .then(e=>e.json())
-                .then(data=>console.log(data))
+
+        store.subscribe('currentTest', (value)=>{
+            this.model.getTests(value)
+                .then(data=>{
+                    this.view.layOutTest(data.testList)
+                })
         })
+
+        this.model.sendAnswers()
     }
 
 }
