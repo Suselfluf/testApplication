@@ -3,6 +3,7 @@ const config = require('config')
 const mongoose = require('mongoose')
 const testTypeRouter = require('./routers/test-type')
 const testListRouter = require('./routers/test-list')
+const testResultRouter = require('./routers/test-result')
 
 class App {
     constructor() {
@@ -23,6 +24,7 @@ class App {
         this.server.use(express.json())
         this.server.use('/api', testTypeRouter)
         this.server.use('/api', testListRouter)
+        this.server.use('/api', testResultRouter)
     }
 
     async runServer() {
