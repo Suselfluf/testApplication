@@ -11,15 +11,16 @@ export class Control {
     }
 
     initialization(){
-
         store.subscribe('currentTest', (value)=>{
             this.model.getTests(value)
                 .then(data=>{
                     this.view.layOutTest(data.testList)
                 })
         })
-
         this.model.sendAnswers()
+            .then(e=>{
+                this.view.latOutResult(e)
+            })
     }
 
 }

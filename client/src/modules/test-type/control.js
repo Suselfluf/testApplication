@@ -6,6 +6,7 @@ export class Control{
     constructor() {
         this.view = new View(this.getCurrentTarget.bind(this));
         this.model = new Model();
+        this.test =''
     }
 
     initialization(){

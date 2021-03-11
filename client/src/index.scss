@@ -11,8 +11,6 @@ input{
     margin: 0 4rem 0 4rem;
     text-align: center;
 }
-.wrapper{
-}
 
 #testType {
     display: grid;
@@ -22,7 +20,7 @@ input{
     grid-template-columns: repeat(3,1fr);
 }
 #testType > p{
-     text-align: center;
+    text-align: center;
 }
 .title {
     display: grid;
@@ -55,9 +53,9 @@ input{
 .testLayout{
     margin:30px 40px 0 40px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
     grid-column-gap: 2rem;
     grid-row-gap:3rem;
+
 
 }
 
@@ -69,11 +67,10 @@ input{
     text-align: center;
     justify-items: center;
     grid-template-columns: 1fr;
-
-
 }
 
 #answers{
+    padding: 3px 0 3px 0;
     border: outset 1px #2D0571;
     background-color: #7A45D6;
     color: #FFE100;
@@ -82,14 +79,18 @@ input{
     height: 40px;
 
     &.active{
-        border: dashed 2px black;
+        margin: -2px 0px -2px 0px;
+        border: solid 3px #BFAE30;
+        background-color: #7378D2;
     }
 }
 
 
+
 @media (hover: hover) {
     #answers:hover {
-        border: 3px solid #BFAE30; /* solves sticky problem */
+        margin: -2px 0px -2px 0px;
+        border: 3px solid #BFAE30; /* solve sticky problem */
         cursor: pointer;
     }
     .btn:hover {
@@ -100,3 +101,30 @@ input{
         cursor: pointer;
     }
 }
+
+@media (min-width: 400px) {
+    .testLayout{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .testLayout{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width: 1700px){
+    .testLayout{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+}
+
+.results{
+    margin: auto;
+}
+

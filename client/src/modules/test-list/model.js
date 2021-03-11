@@ -1,3 +1,5 @@
+import {store} from "../../Store/store";
+
 export class Model {
 
     getTests(value){
@@ -10,12 +12,28 @@ export class Model {
         })
     }
 
-    sendAnswers(){
-        $('form').submit(function (e){
-            e.preventDefault();
-            var form = $('form').serializeArray();
-            console.log(form)
-        })
+     sendAnswers(){
+         return new Promise(resolve => {
+             $('form').submit(function (e){
+                 e.preventDefault();
+                 const form = $('form').serializeArray();
+                 const testResult = {
+                     testName:store._store.currentTest.value,
+                     result: form
+                 }
+                 $.ajax('api/result',{
+                     method :"POST",
+                     data: JSON.stringify(testResult),
+                     dataType: 'json',
+                     headers : {
+                         "Content-type": "application/json",
+                     },
+                 })
+                     .done(data=>{
+                         resolve(data)
+                     })
+             })
+         })
     }
 }
 

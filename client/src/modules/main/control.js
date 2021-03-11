@@ -7,7 +7,7 @@ export class Control {
     }
 
     initialization(){
-         this.testType.initialization()
+        this.testType.initialization()
         this.testList.initialization()
     }
 }

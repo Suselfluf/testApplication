@@ -1,8 +1,4 @@
-
 export class Model{
-    constructor() {
-        this.testInfo = []
-    }
 
 
      getTestsInfo(){
