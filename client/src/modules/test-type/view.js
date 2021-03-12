@@ -1,6 +1,7 @@
 export class View{
     constructor(returnToControl){
         this.returnToControl = returnToControl
+
     }
 
     viewTestLayout(info){

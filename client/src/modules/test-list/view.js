@@ -24,7 +24,7 @@ export class View {
     }
 
     latOutResult(answers){
-        console.log(answers)
+        console.log('latOutRes has initialized')
         $('.testQuestions').css('display','none')
         $('#submit').remove();
         $('.results').remove();

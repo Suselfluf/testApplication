@@ -16,11 +16,12 @@ export class Control {
                 .then(data=>{
                     this.view.layOutTest(data.testList)
                 })
+            this.model.sendAnswers()
+                .then(e=>{
+                    this.view.latOutResult(e)
+                })
         })
-        this.model.sendAnswers()
-            .then(e=>{
-                this.view.latOutResult(e)
-            })
+
     }
 
 }

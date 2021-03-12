@@ -20,4 +20,8 @@ export class Control{
     getCurrentTarget(currentTest){
         store.setData('currentTest', currentTest)
     }
+
+    printingInfo(info){
+        console.log(info)
+    }
 }

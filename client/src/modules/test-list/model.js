@@ -15,6 +15,7 @@ export class Model {
      sendAnswers(){
          return new Promise(resolve => {
              $('form').submit(function (e){
+                 console.log(e)
                  e.preventDefault();
                  const form = $('form').serializeArray();
                  const testResult = {
