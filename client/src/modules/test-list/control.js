@@ -5,7 +5,6 @@ import {Model} from './model.js';
 
 export class Control {
     constructor() {
-        this.currentTest = ''
         this.model = new Model()
         this.view = new View()
     }
@@ -21,7 +20,6 @@ export class Control {
                     this.view.latOutResult(e)
                 })
         })
-
     }
 
 }

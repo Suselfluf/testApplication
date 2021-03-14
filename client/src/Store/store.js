@@ -28,6 +28,11 @@ informSubs(channel){
     })
 }
 
+getChannelName(channel){
+    const {value} = this._store[channel]
+    return value
+}
+
 subscribe(channel, sub){
     let i;
     if(this._store[channel]){

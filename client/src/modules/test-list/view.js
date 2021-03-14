@@ -1,8 +1,7 @@
 export class View {
 
     layOutTest(info){
-        const testLayout = $('.testLayout').css('display','grid')
-        testLayout.html("");
+        $('#result').remove()
          info.forEach((elem)=>{
              const nameAnswer = `question-${elem.questionId}`
              $('.testLayout').append(`<div class="testQuestions ${nameAnswer}">${elem.question}</div>`)
@@ -19,20 +18,12 @@ export class View {
                  })
              })
          })
-        testLayout.append('<div class="results"> </div>')
-        testLayout.append(`<input id="submit" type="submit">`)
+        $('.testLayout').append(`<input id="submit" type="submit">`)
     }
 
     latOutResult(answers){
-        console.log('latOutRes has initialized')
-        $('.testQuestions').css('display','none')
-        $('#submit').remove();
-        $('.results').remove();
-        $('.testLayout').append(`<div></div>`).append('<div class="results"> </div>');
-        $('.results').append(`<p>You result is: ${answers.testResult}</p>`)
+        const testLayout = $('.testLayout')
+        testLayout.empty()
+        testLayout.append(`<p id="result">You result is: ${answers.testResult}</p>`)
     }
-
-
-
-
 }
