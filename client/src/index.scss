@@ -8,8 +8,12 @@ input{
 }
 #submit{
     height: 40px;
-    margin: 0 4rem 0 4rem;
+    width: 300px;
+    align-self: center;
+    justify-self:center;
     text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 #testType {
@@ -29,6 +33,7 @@ input{
 }
 .footer{
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     bottom: 0;
@@ -107,6 +112,10 @@ input{
         display: grid;
         grid-template-columns: repeat(1,1fr);
     }
+    #submit{
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
 }
 
 
@@ -115,16 +124,25 @@ input{
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }
+    #submit{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 }
 
 @media (min-width: 1700px){
     .testLayout{
         grid-template-columns: repeat(3,1fr);
     }
-
+    #submit{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
 }
 
-.results{
-    margin: auto;
+#result{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: center;
+    align-self: center;
 }
-
