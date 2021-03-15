@@ -28,7 +28,7 @@ informSubs(channel){
     })
 }
 
-getChannelName(channel){
+getChannelValue(channel){
     const {value} = this._store[channel]
     return value
 }

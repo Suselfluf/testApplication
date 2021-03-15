@@ -18,7 +18,7 @@ export class Model {
                  e.preventDefault();
                  const form = $('form').serializeArray();
                  const testResult = {
-                     testName:store.getChannelName('currentTest'),
+                     testName:store.getChannelValue('currentTest'),
                      result: form
                  }
                  $.ajax('api/result',{
